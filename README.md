@@ -4,7 +4,8 @@ A real-time sensor monitoring dashboard for sewage gas detection and environment
 
 🌐 **Live Demo:** [https://iot-sewage-gaurd-platform.vercel.app/](https://iot-sewage-gaurd-platform.vercel.app/)
 
-![Dashboard Overview](image2)
+<img width="1827" height="962" alt="Screenshot 2025-12-26 192959" src="https://github.com/user-attachments/assets/c4e2942e-270b-4043-a7a6-e9d8aabeae32" />
+
 
 ## 📋 Overview
 
@@ -20,7 +21,7 @@ The IoT Sewage Guard Platform is a comprehensive monitoring solution that tracks
 - **Alert System**: Real-time danger alerts when thresholds are exceeded
 
 ### 📊 Data Visualization
-![Historical Trends](image1)
+<img width="1751" height="927" alt="Screenshot 2025-12-26 193033" src="https://github.com/user-attachments/assets/5d7e1a17-67e3-452a-8b1e-dd43697fbeed" />
 
 - **Historical Trends**: Interactive charts showing gas levels over time
 - **Temperature & Humidity Graphs**: Visualize environmental conditions
