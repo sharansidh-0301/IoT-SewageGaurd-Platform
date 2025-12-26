@@ -179,3 +179,6 @@ For support, please open an issue in the GitHub repository or contact the mainta
 ---
 
 **⚠️ Safety Notice**: This system is designed to monitor hazardous gases in sewage systems. Always follow proper safety protocols and use this platform as part of a comprehensive safety system, not as a standalone solution.
+
+## License
+This project is licensed under the MIT License.
