@@ -10,6 +10,7 @@ import { ConnectionStatus } from '@/components/dashboard/ConnectionStatus';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Clock, Database } from 'lucide-react';
 import { format } from 'date-fns';
+import { GAS_SENSORS } from '@/config/sensors';
 
 const Index = () => {
   const { latestData, history, isLoading, error, lastUpdated, refreshData } = useSensorData();
@@ -107,26 +108,14 @@ const Index = () => {
               Gas Sensors (MQ Series)
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              <GasSensorCard 
-                label="Gas Sensor 1" 
-                value={data.gas1} 
-                status={data.gas1_status} 
-              />
-              <GasSensorCard 
-                label="Gas Sensor 2" 
-                value={data.gas2} 
-                status={data.gas2_status} 
-              />
-              <GasSensorCard 
-                label="Gas Sensor 3" 
-                value={data.gas3} 
-                status={data.gas3_status} 
-              />
-              <GasSensorCard 
-                label="Gas Sensor 4" 
-                value={data.gas4} 
-                status={data.gas4_status} 
-              />
+              {GAS_SENSORS.map((sensor) => (
+                <GasSensorCard 
+                  key={sensor.id}
+                  label={sensor.name}
+                  value={data[sensor.dataKey as keyof typeof data] as number}
+                  status={data[`${sensor.dataKey}_status` as keyof typeof data] as 'SAFE' | 'DANGER'}
+                />
+              ))}
             </div>
           </section>
 
