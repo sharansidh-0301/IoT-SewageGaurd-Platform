@@ -14,7 +14,57 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      sensor_data: {
+        Row: {
+          alert_flag: boolean
+          created_at: string
+          distance: number
+          gas1: number
+          gas1_status: string
+          gas2: number
+          gas2_status: string
+          gas3: number
+          gas3_status: string
+          gas4: number
+          gas4_status: string
+          humidity: number
+          id: string
+          temperature: number
+        }
+        Insert: {
+          alert_flag?: boolean
+          created_at?: string
+          distance?: number
+          gas1?: number
+          gas1_status?: string
+          gas2?: number
+          gas2_status?: string
+          gas3?: number
+          gas3_status?: string
+          gas4?: number
+          gas4_status?: string
+          humidity?: number
+          id?: string
+          temperature?: number
+        }
+        Update: {
+          alert_flag?: boolean
+          created_at?: string
+          distance?: number
+          gas1?: number
+          gas1_status?: string
+          gas2?: number
+          gas2_status?: string
+          gas3?: number
+          gas3_status?: string
+          gas4?: number
+          gas4_status?: string
+          humidity?: number
+          id?: string
+          temperature?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
