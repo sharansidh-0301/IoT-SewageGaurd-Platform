@@ -1,1 +1,10 @@
 project_id = "iplxcuwwemybymlrbgnu"
+
+[functions.sensor-data]
+verify_jwt = false
+
+[functions.latest-data]
+verify_jwt = false
+
+[functions.history]
+verify_jwt = false
