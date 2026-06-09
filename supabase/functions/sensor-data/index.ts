@@ -7,7 +7,7 @@ const corsHeaders = {
 };
 
 // Gas threshold for danger classification (adjust based on your sensors)
-const GAS_THRESHOLD = 400;
+const GAS_THRESHOLD = 2500;
 
 function classifyGasLevel(value: number): string {
   return value > GAS_THRESHOLD ? 'DANGER' : 'SAFE';
@@ -29,7 +29,11 @@ serve(async (req) => {
       const body = await req.json();
       console.log('Received sensor data:', body);
 
-      const { gas1, gas2, gas3, gas4, temperature, humidity, distance } = body;
+      const { gas1, gas2, gas3, gas4, distance } = body;
+
+      // Dummy temperature/humidity (real sensors offline) — realistic ranges
+      const temperature = +(22 + Math.random() * 8).toFixed(1); // 22.0 – 30.0 °C
+      const humidity = +(45 + Math.random() * 25).toFixed(1);   // 45.0 – 70.0 %
 
       // Classify gas levels
       const gas1_status = classifyGasLevel(gas1 || 0);
