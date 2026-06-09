@@ -11,8 +11,8 @@ interface GasSensorCardProps extends GasSensorProps {
 export function GasSensorCard({ label, value, status, unit = 'ppm', className }: GasSensorCardProps) {
   const isDanger = status === 'DANGER';
   
-  // Calculate percentage for the gauge (assuming max 1000 ppm)
-  const percentage = Math.min((value / 1000) * 100, 100);
+  // Calculate percentage for the gauge (assuming max 3000 ppm)
+  const percentage = Math.min((value / 3000) * 100, 100);
   
   return (
     <Card className={cn(
@@ -60,8 +60,8 @@ export function GasSensorCard({ label, value, status, unit = 'ppm', className }:
           
           <div className="flex justify-between text-xs text-muted-foreground">
             <span>0</span>
-            <span>Threshold: 400</span>
-            <span>1000</span>
+            <span>Threshold: 2500</span>
+            <span>3000</span>
           </div>
         </div>
       </CardContent>
